@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Placement Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <div class="brand">
+      <div class="brand-icon">🎓</div>
+      <span>Student Placement Tracker</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="#dashboard" class="active">Dashboard</a>
+      <a href="#add-student">Add Student</a>
+      <a href="#records">Placement Records</a>
+      <a href="#about">About</a>
+    </div>
+
+    <div class="avatar">A</div>
+
+  </nav>
+
+
+  <div class="page">
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="dashboard">
+
+      <div class="hero-content">
+
+        <div class="badge">
+          <span class="dot"></span>
+          Live Placement Portal
+        </div>
+
+        <h1>Placement Dashboard</h1>
+
+        <p>
+          Manage and monitor student placement records efficiently.
+          Track company selections, pending applications, and placement
+          outcomes in one place.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#add-student" class="btn btn-white">
+            + Add Student
+          </a>
+
+          <a href="#records" class="btn btn-outline">
+            View Records
+          </a>
+        </div>
+
+      </div>
+
+      <div class="grad-cap">🎓</div>
+
+    </section>
+
+
+    <!-- STAT CARDS -->
+    <section class="stats-grid">
+
+      <div class="stat-card">
+
+        <div class="stat-left">
+
+          <div class="stat-icon blue">👥</div>
+
+          <div>
+            <div class="stat-num">0</div>
+            <div class="stat-label">Total Students</div>
+          </div>
+
+        </div>
+
+        <div class="stat-bar blue"></div>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <div class="stat-left">
+
+          <div class="stat-icon green">✅</div>
+
+          <div>
+            <div class="stat-num">0</div>
+            <div class="stat-label">Selected Students</div>
+          </div>
+
+        </div>
+
+        <div class="stat-bar green"></div>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <div class="stat-left">
+
+          <div class="stat-icon amber">🏆</div>
+
+          <div>
+            <div class="stat-num">0</div>
+            <div class="stat-label">Pending Applications</div>
+          </div>
+
+        </div>
+
+        <div class="stat-bar amber"></div>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <div class="stat-left">
+
+          <div class="stat-icon red">❌</div>
+
+          <div>
+            <div class="stat-num">0</div>
+            <div class="stat-label">Rejected</div>
+          </div>
+
+        </div>
+
+        <div class="stat-bar red"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- OVERVIEW + ACTIVITY -->
+    <section class="cols">
+
+      <!-- PLACEMENT OVERVIEW -->
+      <div class="panel">
+
+        <h2>Placement Overview</h2>
+
+        <div class="sub">
+          Live placement statistics
+        </div>
+
+
+        <div class="overview-row">
+
+          <div class="overview-top">
+            <span>Selected</span>
+            <span class="pct green">0%</span>
+          </div>
+
+          <div class="track">
+            <div class="fill green" style="width:0%"></div>
+          </div>
+
+        </div>
+
+
+        <div class="overview-row">
+
+          <div class="overview-top">
+            <span>Pending</span>
+            <span class="pct amber">0%</span>
+          </div>
+
+          <div class="track">
+            <div class="fill amber" style="width:0%"></div>
+          </div>
+
+        </div>
+
+
+        <div class="overview-row">
+
+          <div class="overview-top">
+            <span>Rejected</span>
+            <span class="pct red">0%</span>
+          </div>
+
+          <div class="track">
+            <div class="fill red" style="width:0%"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- RECENT ACTIVITY -->
+      <div class="panel">
+
+        <h2>Recent Activity</h2>
+
+        <div class="sub">
+          Latest placement updates
+        </div>
+
+        <div class="empty-state">
+          No placement activity available yet.
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ADD RECORD FORM -->
+    <section class="panel form-panel" id="add-student">
+
+      <h2>Add Placement Record</h2>
+
+      <div class="sub">
+        Fill in the details to register a new student placement entry
+      </div>
+
+
+      <form>
+
+        <div class="form-grid">
+
+          <div class="field">
+
+            <label for="f-name">
+              Student Name
+            </label>
+
+            <input id="f-name" type="text" placeholder="e.g. Ananya Singh">
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="f-course">
+              Course / Branch
+            </label>
+
+            <input id="f-course" type="text" placeholder="e.g. MCA, BCA, B.Tech">
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="f-company">
+              Company Name
+            </label>
+
+            <input id="f-company" type="text" placeholder="e.g. TCS, Infosys, Wipro">
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="f-status">
+              Placement Status
+            </label>
+
+            <select id="f-status">
+
+              <option value="Selected">
+                ✅ Selected
+              </option>
+
+              <option value="Pending">
+                🕒 Pending
+              </option>
+
+              <option value="Rejected">
+                ❌ Rejected
+              </option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+
+        <div class="form-actions">
+
+          <button type="submit" class="btn btn-primary">
+            + Add Record
+          </button>
+
+          <button type="reset" class="btn btn-secondary">
+            Clear
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
+
+
+    <!-- RECORDS TABLE -->
+    <section class="panel" id="records">
+
+      <div class="records-header">
+
+        <h2>
+          Student Placement Records
+        </h2>
+
+        <span class="records-count">
+          0 records shown
+        </span>
+
+      </div>
+
+
+      <!-- FILTERS -->
+      <div class="filters">
+
+        <div class="search">
+
+          <span class="icon">🔍</span>
+
+          <input type="text" placeholder="Search by name or company...">
+
+        </div>
+
+
+        <select>
+
+          <option>
+            All Statuses
+          </option>
+
+          <option>
+            Selected
+          </option>
+
+          <option>
+            Pending
+          </option>
+
+          <option>
+            Rejected
+          </option>
+
+        </select>
+
+
+        <select>
+
+          <option>
+            All Companies
+          </option>
+
+        </select>
+
+
+        <button type="button" class="reset-btn">
+          ↺ Reset
+        </button>
+
+      </div>
+
+
+      <!-- TABLE -->
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>S.NO.</th>
+            <th>STUDENT NAME</th>
+            <th>COURSE / BRANCH</th>
+            <th>COMPANY</th>
+            <th>STATUS</th>
+            <th>ACTION</th>
+
+          </tr>
+
+        </thead>
+
+
+        <tbody>
+
+          <!-- No dummy data -->
+          <!-- Real records can be added here dynamically -->
+
+        </tbody>
+
+      </table>
+
+
+      <!-- EMPTY MESSAGE -->
+      <div class="table-empty">
+
+        <div class="empty-icon">
+          📋
+        </div>
+
+        <h3>
+          No placement records found
+        </h3>
+
+        <p>
+          Add a student placement record to see it here.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="panel" id="about">
+
+      <h2>About</h2>
+
+      <div class="sub">
+        What this tool does
+      </div>
+
+      <p class="about-text">
+        Student Placement Tracker helps placement cells manage and
+        monitor student placement activity — from logging new
+        applications to tracking selections, pending offers, and
+        rejections, all in a single live dashboard.
+      </p>
+
+    </section>
+
+  </div>
+
+
+  <!-- HELP BUTTON -->
+  <div class="help-fab">
+    ?
+  </div>
+
+<script src="index.js"></script>
+</body>
+
+</html>
